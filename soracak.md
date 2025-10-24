@@ -1,0 +1,2 @@
+- promo.py update_promo() su an put yapiyor ama patch gibi. bunu ayiracak miyiz?
+- database field olarak products nasil tutacagiz (ayri tablo mu, json field mi vs)
