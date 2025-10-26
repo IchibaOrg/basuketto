@@ -1,7 +1,7 @@
 """Add Promo, Cart and Cart model
 
 Revision ID: 08ae0e1f24c1
-Revises: 
+Revises:
 Create Date: 2025-10-20 20:24:45.308340
 
 """
