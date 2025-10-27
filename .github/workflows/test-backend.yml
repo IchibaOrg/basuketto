@@ -40,7 +40,7 @@ jobs:
           echo "POSTGRES_PORT=5432" >> .env
           echo "SENTRY_DSN=" >> .env
           echo "STACK_NAME=basuketto" >> .env
-          echo "DOCKER_IMAGE_BACKEND=basuketto-backend:latest" >> .env
+          echo "DOCKER_IMAGE_BACKEND=basuketto-backend" >> .env
       - run: docker compose down -v --remove-orphans
       - run: docker compose up -d db
       - name: Migrate DB
