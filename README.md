@@ -1,7 +1,7 @@
-# Full Stack FastAPI Template
+# Basuketto Cart, Promo, and Order Management Backend
 
-<a href="https://github.com/fastapi/full-stack-fastapi-template/actions?query=workflow%3ATest" target="_blank"><img src="https://github.com/fastapi/full-stack-fastapi-template/workflows/Test/badge.svg" alt="Test"></a>
-<a href="https://coverage-badge.samuelcolvin.workers.dev/redirect/fastapi/full-stack-fastapi-template" target="_blank"><img src="https://coverage-badge.samuelcolvin.workers.dev/fastapi/full-stack-fastapi-template.svg" alt="Coverage"></a>
+<a href="https://github.com/ichibaorg/basuketto/actions?query=workflow%3ATest" target="_blank"><img src="https://github.com/ichibaorg/basuketto/workflows/Test/badge.svg" alt="Test"></a>
+<a href="https://coverage-badge.samuelcolvin.workers.dev/redirect/ichibaorg/basuketto" target="_blank"><img src="https://coverage-badge.samuelcolvin.workers.dev/ichibaorg/basuketto.svg" alt="Coverage"></a>
 
 ## Technology Stack and Features
 
@@ -10,9 +10,6 @@
     - 🔍 [Pydantic](https://docs.pydantic.dev), used by FastAPI, for the data validation and settings management.
     - 💾 [PostgreSQL](https://www.postgresql.org) as the SQL database.
 - 🐋 [Docker Compose](https://www.docker.com) for development and production.
-- 🔒 Secure password hashing by default.
-- 🔑 JWT (JSON Web Token) authentication.
-- 📫 Email based password recovery.
 - ✅ Tests with [Pytest](https://pytest.org).
 - 📞 [Traefik](https://traefik.io) as a reverse proxy / load balancer.
 - 🚢 Deployment instructions using Docker Compose, including how to set up a frontend Traefik proxy to handle automatic HTTPS certificates.
