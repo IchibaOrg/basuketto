@@ -27,11 +27,12 @@ jobs:
           echo "DOMAIN=localhost" >> .env
           echo "ENVIRONMENT=local" >> .env
           echo "STACK_NAME=basuketto" >> .env
+          echo "PROJECT_NAME=basuketto" >> .env
           echo "BACKEND_CORS_ORIGINS=http://localhost" >> .env
           echo "EMAILS_FROM_EMAIL=test@example.com" >> .env
           echo "POSTGRES_PORT=5432" >> .env
+          echo "POSTGRES_SERVER=db" >> .env
           echo "SENTRY_DSN=" >> .env
-          echo "STACK_NAME=basuketto" >> .env
           echo "DOCKER_IMAGE_BACKEND=basuketto-backend" >> .env
       - run: docker compose build
       - run: docker compose down -v --remove-orphans
