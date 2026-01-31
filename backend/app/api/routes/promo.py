@@ -8,10 +8,12 @@ from app.api.deps import SessionDep
 from app.models import (
     Message,
     Promo,
+    PromoBase,
     PromoCreate,
     PromoPublic,
     PromosPublic,
     PromoUpdate,
+    PromoWithCarts,
 )
 
 router = APIRouter(prefix="/promos", tags=["promos"])
@@ -32,8 +34,8 @@ def read_promos(
     return PromosPublic(data=promos_public, count=count)
 
 
-@router.get("/{id}", response_model=PromoPublic)
-def read_promo(session: SessionDep, id: uuid.UUID) -> Any:
+@router.get("/{id}", response_model=PromoWithCarts)
+def read_promo(session: SessionDep, id: uuid.UUID) -> PromoBase:
     """
     Get promo by ID.
     """
@@ -44,7 +46,7 @@ def read_promo(session: SessionDep, id: uuid.UUID) -> Any:
 
 
 @router.post("/", response_model=PromoPublic)
-def create_promo(*, session: SessionDep, promo_in: PromoCreate) -> Any:
+def create_promo(*, session: SessionDep, promo_in: PromoCreate) -> PromoBase:
     """
     Create new promo.
     """
@@ -61,7 +63,7 @@ def update_promo(
     session: SessionDep,
     id: uuid.UUID,
     promo_in: PromoUpdate,
-) -> Any:
+) -> PromoBase:
     """
     Update a promo.
     """

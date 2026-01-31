@@ -34,6 +34,8 @@ def test_read_promo(client: TestClient, db: Session) -> None:
     assert content["code"] == promo.code
     assert content["discount_type"] == promo.discount_type
     assert content["id"] == str(promo.id)
+    assert content["is_active"]
+    assert "carts" in content
 
 
 def test_read_promo_not_found(
